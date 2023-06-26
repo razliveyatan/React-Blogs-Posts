@@ -4,14 +4,16 @@ import HomePage from '../components/home/homePage';
 import BlogPage from '../components/blog/blogPage';
 import PostPage from '../components/post/postPage';
 import ErrorPage from '../components/error/errorPage';
+import { NavBar } from '../components/navBar/navbar';
 
 const MainRouter: React.FC = () => {
   return (
     <BrowserRouter>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />        
-        <Route path="/blog/:blogId" element={<BlogPage />} />
-        <Route path="/blog/:blogId/post/:postId" element={<PostPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/post/:postId" element={<PostPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
