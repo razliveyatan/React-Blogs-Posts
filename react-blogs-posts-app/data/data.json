@@ -1,0 +1,68 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "date": "someDate",
+        "imgUrl": "blogImage",
+        "blogContent": {
+          "title": "Title",
+          "subTitle": "SubTitle",
+          "mainContent": "Main Content"
+        },
+        "posts": [
+          {
+            "id": 1,
+            "date": "someDate",
+            "postImgUrl": "imageUrl",
+            "postContent": {
+              "postTitle": "Post Title",
+              "postSubTitle": "Post SubTitle",
+              "postMainContent": "Post MainContent"
+            }
+          },
+          {
+            "id": 2,
+            "date": "someDate2",
+            "postImgUrl": "imageUrl2",
+            "postContent": {
+              "postTitle": "Post Title2",
+              "postSubTitle": "Post SubTitle2",
+              "postMainContent": "Post MainContent2"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "someDate2",
+        "imgUrl": "blogImage2",
+        "blogContent": {
+          "title": "Title2",
+          "subTitle": "SubTitle2",
+          "mainContent": "Main Content2"
+        },
+        "posts": [
+          {
+            "id": 1,
+            "date": "someDate",
+            "postImgUrl": "imageUrl",
+            "postContent": {
+              "postTitle": "Post Title",
+              "postSubTitle": "Post SubTitle",
+              "postMainContent": "Post MainContent"
+            }
+          },
+          {
+            "id": 2,
+            "date": "someDate2",
+            "postImgUrl": "imageUrl2",
+            "postContent": {
+              "postTitle": "Post Title2",
+              "postSubTitle": "Post SubTitle2",
+              "postMainContent": "Post MainContent2"
+            }
+          }
+        ]
+      }
+    ]
+  }
