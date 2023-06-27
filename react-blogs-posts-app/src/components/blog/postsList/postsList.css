@@ -1,0 +1,36 @@
+@media (min-width: 1200px){
+    .postsListGrid {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+@media (min-width: 992px){
+    .postsListGrid {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+@media (min-width: 768px){
+    .postsListGrid {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+@media (min-width: 576px){
+    .postsListGrid {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+.postsListGrid {
+    display: -ms-flexbox;
+    margin-right: -15px;
+    margin-left: -15px;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: opacity .2s;
+}
