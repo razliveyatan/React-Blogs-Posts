@@ -9,7 +9,7 @@ const PostItem = (props:PostItemInterface) => {
             <div className='postGridInner-left'>
                 <div className='postAuthors'>
                     <h6 className='author'>
-                        <a className='d-flex'>
+                        <a className='d-flex' target='_blank' rel="noreferrer" href='https://www.google.com/search?q=bankworke'>
                             <div className='author-thumb'>
                                 <div className='author-mask'>
                                     <img src={props.postItemBottomSection.postCreatorImage} alt={props.postItemBottomSection.postCreator}/>
@@ -18,7 +18,7 @@ const PostItem = (props:PostItemInterface) => {
                             <div className='author-details'>
                                 <span>{props.postItemBottomSection.postCreator}</span>
                                 <br/>
-                                <span className='date'>{props.postItemTopSection.postDate.toDateString()}</span>
+                                <span className='date'>{props.postItemTopSection.postDate}</span>
                             </div>
                         </a>
                     </h6>

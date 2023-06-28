@@ -1,0 +1,143 @@
+@media (min-width: 768px){
+    .authorMain {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 576px){
+    .authorMain {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+.authorMain {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px){
+    .authorMain .authorContent {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+@media (min-width: 576px){
+    .authorMain .authorContent {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+.authorMain .authorContent {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    min-width: 100%;
+}
+
+@media (min-width: 768px){
+    .authorImage {
+        padding-right: 15px;
+        padding-left: 15px;
+    }    
+}
+
+@media (min-width: 576px){
+    .authorImage {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.authorImage {
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+.authorImage {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a{ 
+    touch-action: manipulation;
+    background-color: transparent;  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.authorImage img {
+    position: absolute;
+    visibility: hidden;
+}
+
+@media (min-width: 768px){
+    .authorInfo {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 576px){
+    .authorInfo {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.authorInfo {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    background-color: #f5f5f1;
+    padding: 6px;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0;
+}
+
+.authorInfo h4, .authorInfo p {
+    font-size: 12px;
+    line-height: 1.125rem;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.authorSocialIcons {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+.authorSocialIcons a {
+    touch-action: manipulation;
+    font-size: 24px;
+    margin-right: -4px;
+    line-height: 28px;
+}

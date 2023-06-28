@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bankBlogImage from '../../assets/banking-blog-image.jpg';
+import bankBlogImage from '../../projInnerAssets/banking-blog-image.jpg';
 
-const HomePage = () => {
+const HomePage = () => {    
+
     return (
     <div className='mainContainer'>
         <h1 className='mainTitle'>

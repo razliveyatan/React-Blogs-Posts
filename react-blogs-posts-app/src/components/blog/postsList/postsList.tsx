@@ -1,10 +1,9 @@
 import React from 'react';
-import { PostItemListInterface, PostItemInterface } from '../../../interfaces/interfaces';
+import { PostItemInterface } from '../../../interfaces/interfaces';
 import PostItem from './postItem/postItem';
 
-const PostsList = () => {
-    const data:any = {};
-    const postsListItems = data.postsList;
+const PostsList = (props: { postsListItems: PostItemInterface[] }) => {       
+    const postsListItems:PostItemInterface[] = props.postsListItems;
     return (
     <>
         <div className='postsListGrid'>

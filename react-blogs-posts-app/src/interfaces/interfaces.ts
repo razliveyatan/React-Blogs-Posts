@@ -8,26 +8,22 @@ export interface PostItemInterface {
     
 }
 
-export interface PostItemListInterface {
-    postsList: PostItemInterface[]
-}
-
 export interface BlogInterface {
     blogId:number,
-    blogDate:Date,
+    blogDate:string,
     blogTitle:string,
-    blogSubTitle:string|null,
-    blogImageUrl:string|null,
-    blogContent:React.ReactNode|null,
-    postsList:PostItemListInterface
+    blogSubTitle:string,
+    blogImageUrl:string,
+    // blogContent:React.ReactNode|null,
+    postsList:PostItemInterface[]
 }
 
 
 export interface PostItemTopSectionInterface {
-    postDate:Date,
+    postDate:string,
     postTitle:string,
-    postSubTitle:string|null,
-    postImageUrl:string|null,
+    postSubTitle:string,
+    postImageUrl:string,
 }
 
 export interface PostItemContentSectionInterface{
@@ -37,7 +33,7 @@ export interface PostItemContentSectionInterface{
 export interface PostItemBottomSectionInterface {
     postCreator:string,
     postCreatorImage:string,
-    postCreatorTitle:string|null,
-    postCreatorlinkedInUrl:string|null,
-    postCreatorMailTo:string|null
+    postCreatorTitle:string,
+    postCreatorlinkedInUrl:string,
+    postCreatorMailTo:string
 }

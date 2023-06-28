@@ -1,0 +1,26 @@
+.wrap {
+    background-color: #fff;
+    padding: 40px;
+}
+
+@media (min-width: 768px){
+    .main {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 576px){
+    .main {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

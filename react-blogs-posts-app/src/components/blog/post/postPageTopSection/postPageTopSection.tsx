@@ -3,7 +3,7 @@ import { PostItemTopSectionInterface } from '../../../../interfaces/interfaces';
 
 const PostPageTopSection = (props:PostItemTopSectionInterface) => {
     return (
-        <div className='postTopSectionContainer'>
+        <div className={props.postImageUrl ? 'postTopSectionContainer has-image' :'postTopSectionContainer'}>
             {
                 props.postImageUrl &&
                 <div>
@@ -16,9 +16,9 @@ const PostPageTopSection = (props:PostItemTopSectionInterface) => {
                     props.postSubTitle && 
                     <h4>{props.postSubTitle}</h4>
                 }
-                <p>
+                <p className='postDate'>
                     <span>
-                        <time>{props.postDate.toDateString()}</time>
+                        <time>{props.postDate}</time>
                     </span>
                 </p>
             </div>            

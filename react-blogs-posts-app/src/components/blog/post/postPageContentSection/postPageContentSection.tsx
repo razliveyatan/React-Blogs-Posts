@@ -1,5 +1,6 @@
 import React from 'react';
 import { PostItemContentSectionInterface } from '../../../../interfaces/interfaces';
+import '../postPageContentSection/postPageContentSection.css';
 
 const PostPageTopSection = (props:PostItemContentSectionInterface) => {
     return (

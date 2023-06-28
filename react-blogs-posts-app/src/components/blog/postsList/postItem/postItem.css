@@ -11,6 +11,11 @@
     }
 }
 
+.postsListGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .postGridItem{
     position: relative;
     margin: auto 0;
