@@ -2,14 +2,24 @@
     margin-top: 0;    
     display: flex;    
     flex-direction: column;
-    margin-top: 40px;
     position: relative;
     overflow: hidden;
 }
+.postTopSectionContainer.has-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    max-width: 120%;
+    height: auto;
+}
+img {
+    vertical-align: center;
+    border-style: none;
+}
 @media (min-width: 1200px) and (max-width: 1920px){
-    .postTopSectionContainer.has-image {
-        max-width: 1439px;
-        width: 100vw;
+    .postTopSectionContainer.has-image {      
         box-shadow: 0 4px 2px 0 rgba(0,0,0,.03);
     }
 }
@@ -34,11 +44,21 @@
 .postTopSectionContainer.has-image .postTopInnerContainer {
     padding: 0 2rem 4rem;
     z-index: 2;
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     min-height: 400px;
+    text-align: start;
+}
+
+.postTopSectionContainer.has-image .postTopInnerContainer h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0,.2);
+    word-wrap: normal;
+    word-break: normal;
+    max-width: 75%;    
 }
 
 .postTopSectionContainer.has-image .postTopInnerContainer .postDate{
@@ -48,4 +68,9 @@
 .postTopSectionContainer.has-image .postTopInnerContainer .postDate {
     color: #fff;
     text-shadow: 0 0 20px rgba(0,0,0,.3);
+    word-wrap: normal;
+    word-break: normal;
+    max-width: 60%;   
+    margin-bottom: 10px;
+ 
 }

@@ -24,3 +24,16 @@
     padding-right: 15px;
     padding-left: 15px;
 }
+
+.postContentSectionContainer {
+    display:flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+@media screen and (max-width:1280px){
+    .postContentSectionContainer {
+        padding-left:1rem;
+        padding-right:1rem;
+    }   
+}

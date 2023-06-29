@@ -3,6 +3,7 @@ import PostsList from './postsList/postsList';
 import { BlogInterface } from '../../interfaces/interfaces';
 import {getJsonData, storeDataInSession} from '../../services/data-service';
 import '../blog/blogPage.css';
+import BackButton from '../backButton/backButton';
 
 const BlogPage = () => {
     const [data, setData] = useState<BlogInterface | null>(null);   
@@ -16,7 +17,8 @@ const BlogPage = () => {
       }, []);
     
     return (
-        <div className='wrap container'>
+        <div className='blogPageContainer'>
+            <BackButton/>
             <div className={data?.blogImageUrl ? 'blogTopSectionContainer has-image' :'blogTopSectionContainer'}>
                 {
                     data?.blogImageUrl &&

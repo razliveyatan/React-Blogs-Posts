@@ -1,0 +1,11 @@
+.backButton {
+    margin-bottom:1rem;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    cursor: pointer;
+}
+.backButton svg {
+    margin-top:4px;
+    margin-right:5px;
+}

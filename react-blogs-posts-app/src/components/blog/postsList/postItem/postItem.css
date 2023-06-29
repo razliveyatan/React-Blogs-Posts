@@ -19,12 +19,13 @@
 .postGridItem{
     position: relative;
     margin: auto 0;
-    min-width: 100%;
+    min-width: 90%;
     background-color: #fff;    
     display: flex;    
     justify-content: flex-start;    
     align-items: center;
     margin-bottom: 1rem;
+    background-size: 800px 500px;
 }
 
 @media (max-width: 991px){
@@ -121,7 +122,14 @@
 }
 .author-details{
     margin-left: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start
 } 
+
+.author-details span {
+    text-decoration: none;
+}
 
 .author .author-details span:first-child {
     display: inline-block;
@@ -137,16 +145,13 @@
     margin-left: 0.5rem;
     transition: border .15s ease-in,width .15s ease-in,margin .15s ease-in;
     position: relative;
-    flex: 1 1 50%;
 }
 @media (max-width:991px){
     .postGridInner-right{
         min-width: 100%;
     }
 }
-/* .postGridInner-content{
 
-} */
 
 .postGridInner-right a {
     color:#000;
@@ -168,4 +173,179 @@
     transition: .5s ease;
 
 }
-                        
+ I want that my .postItemWrapper{
+    display: flex;
+    margin-bottom: 1rem;
+    flex:0 0 100%;
+    max-width: 100%;
+}
+@media (min-width: 768px){
+    .postItemWrapper {        
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.postsListGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.postGridItem{
+    position: relative;
+    margin: auto 0;
+    min-width: 90%;
+    background-color: #fff;    
+    display: flex;    
+    justify-content: flex-start;    
+    align-items: center;
+    margin-bottom: 1rem;
+    background-size: 800px 500px;
+}
+
+@media (max-width: 991px){
+    .postGridItem {             
+        flex-direction: column;
+    }
+}
+
+.postGridInner-left{
+    overflow: hidden;
+    background-position: 50%;
+    background-size: cover;
+    min-height: 18rem;
+    color: #fff;    
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding: 1rem 0.75rem;
+    flex: 1 1 50%;
+}
+.postGridInner-left::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media (max-width: 991px){
+    .postGridInner-left {
+        min-width: 100%;
+    }
+}
+.postGridItem .postGridInner-left a {
+    color: #fff;
+    transition: color .2s;
+}
+
+.postAuthors{
+    padding: 0.25rem;
+    position: relative;
+    z-index: 1;
+}
+.author{
+    margin-bottom: 0.75rem;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+/* .author-thumb{
+
+} */
+.author .author-mask {
+    margin-right: 0.25rem;
+    width: 54px;
+    height: 54px;
+    min-height: 54px;
+    min-width: 54px;
+    box-shadow: 0 4px 2px 0 rgba(0,0,0,.03);
+}
+.author-thumb .author-mask{
+    width: 54px;
+    height: 54px;
+    min-height: 54px;
+    min-width: 54px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+}
+
+@media (max-width: 991px){
+    .author-thumb .author-mask {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.author-thumb .author-mask img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 110%;
+    border-radius: 0;
+}
+.author-details{
+    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start
+} 
+
+.author .author-details span:first-child {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.date{
+    font-weight: 300;
+}
+.postGridInner-right{
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
+    transition: border .15s ease-in,width .15s ease-in,margin .15s ease-in;
+    position: relative;
+}
+@media (max-width:991px){
+    .postGridInner-right{
+        min-width: 100%;
+    }
+}
+
+
+.postGridInner-right a {
+    color:#000;
+}
+.readMore-button{
+    border-color: #000;
+    display: inline-block;
+    border: 3px solid #000;
+    text-align: center;
+    background: none;
+    font-size: .75rem;
+    font-family: Graphik,sans-serif;
+    padding: 0.8em 1em;
+    margin: 10px auto;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none!important;
+    color: #000;
+    transition: .5s ease;
+
+}
+
+.postGridInner-left.hovered::before {
+    width: 0;
+    transition: width 0.5s ease;
+  }

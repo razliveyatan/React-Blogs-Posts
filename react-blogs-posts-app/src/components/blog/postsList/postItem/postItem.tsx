@@ -1,12 +1,23 @@
-import React from 'react';
+import Reactת , {useState} from 'react';
 import { PostItemInterface } from '../../../../interfaces/interfaces';
 import './postItem.css';
 
 const PostItem = (props:PostItemInterface) => { 
+    const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const postGridInnerLeftClass = isHovered ? 'postGridInner-left hovered' : 'postGridInner-left';
     return (
     <div className='postItemWrapper'>
-        <article className='postGridItem'>
-            <div className='postGridInner-left'>
+        <article className='postGridItem' style={{backgroundImage: `url(${props.postItemTopSection.postImageUrl})`}}>
+            <div className={postGridInnerLeftClass}>
                 <div className='postAuthors'>
                     <h6 className='author'>
                         <a className='d-flex' target='_blank' rel="noreferrer" href='https://www.google.com/search?q=bankworke'>
@@ -17,14 +28,15 @@ const PostItem = (props:PostItemInterface) => {
                             </div>
                             <div className='author-details'>
                                 <span>{props.postItemBottomSection.postCreator}</span>
-                                <br/>
                                 <span className='date'>{props.postItemTopSection.postDate}</span>
                             </div>
                         </a>
                     </h6>
                 </div>
             </div>
-            <div className='postGridInner-right'>
+            <div className='postGridInner-right'
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
                 <div className='postGridInner-content'>
                     <a className='readMore-button' href={`/blog/post/${props.postId}`}>
                         Read More

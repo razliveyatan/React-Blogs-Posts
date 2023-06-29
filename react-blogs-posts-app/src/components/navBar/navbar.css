@@ -1,0 +1,27 @@
+@media (min-width: 768px){
+    nav {
+        height:60px
+    }   
+    .navbar-nav a{
+        margin:0 2rem;
+    }
+}
+
+nav {
+    background: #fff;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color:#000;
+    font-weight: 400;
+}
+
+.navbar-nav a.active {
+    font-weight:600;
+}
+.navbar-nav a:not(.active) {
+    color:#ACADB9;
+}
+
+
