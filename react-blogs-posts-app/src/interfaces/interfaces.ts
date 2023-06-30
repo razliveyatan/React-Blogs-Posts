@@ -1,6 +1,7 @@
 import { NullLiteral } from "typescript"
 
 export interface PostItemInterface {
+    postReadMore:string,
     postId:number,
     postItemTopSection:PostItemTopSectionInterface,
     postItemContentSection:PostItemContentSectionInterface,    

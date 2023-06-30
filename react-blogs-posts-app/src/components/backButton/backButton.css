@@ -10,3 +10,7 @@
     margin-right:5px;
 }
 
+.rotated-svg{
+    transform: rotate(180deg);
+}
+

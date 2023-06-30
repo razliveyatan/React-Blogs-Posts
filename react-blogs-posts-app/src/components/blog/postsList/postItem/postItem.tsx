@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { PostItemInterface } from '../../../../interfaces/interfaces';
 import './postItem.css';
 
 const PostItem = (props:PostItemInterface) => { 
-    const [isHovered, setIsHovered] = useState(false);
-
+  const [isHovered, setIsHovered] = useState(false);
+  const [lang, setLang] = useState('en');
+  useEffect(() => {
+    const lang = sessionStorage.getItem('lang');
+    if (lang){
+        setLang(lang);
+    }
+  },[])
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -38,8 +44,8 @@ const PostItem = (props:PostItemInterface) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}>
                 <div className='postGridInner-content'>
-                    <a className='readMore-button' href={`/blog/post/${props.postId}`}>
-                        Read More
+                    <a className='readMore-button' href={`/blog/post/${props.postId}/${lang}`}>
+                        {props.postReadMore}
                     </a>
                 </div>
             </div>

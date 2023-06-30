@@ -18,6 +18,9 @@ code {
   margin:0 auto;
   color: #005986;
 }
+body[dir='ltr']{
+  direction:ltr;
+}
 
 .mainContainer{
   width:960px;

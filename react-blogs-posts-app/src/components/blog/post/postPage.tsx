@@ -1,34 +1,42 @@
 import React, {useState, useEffect} from 'react';
 import PostPageTopSection from './postPageTopSection/postPageTopSection';
 import PostPageContentSection from './postPageContentSection/postPageContentSection';
-import { BlogInterface } from '../../../interfaces/interfaces';
+import { BlogInterface, PostItemInterface } from '../../../interfaces/interfaces';
 import PostPageBottomSection from './postPageBottomSection/postPageBottomSection';
-import { getDataFromSession ,getPostIdFromURL , getJsonData, storeDataInSession} from '../../../services/data-service';
-import { PostItemInterface } from '../../../interfaces/interfaces';
+import { getDataFromSession ,getPostIdFromURL , getJsonData, storeDataInSession, getLanguageFromUrl} from '../../../services/data-service';
+import { useTranslation } from 'react-i18next';
 import './postPage.css';
 import BackButton from '../../backButton/backButton';
 
-
 const PostPage = () => {
-    const [data, setData] = useState<BlogInterface | null>(null); 
+    const [data, setData] = useState<PostItemInterface[]>([]); 
     const [postId, setPostId] = useState(0);
-    useEffect(() => {        
-        const postId = getPostIdFromURL();
-        setPostId(postId ? Number(postId) : 0);
-        const sessionData = getDataFromSession();
-        if (!sessionData){
-          getJsonData('/data/data.json')
-          .then((jsonData:BlogInterface) => {
-            setData(jsonData);
-            storeDataInSession(jsonData);
-        })          
-          .catch(error => console.error('Error fetching JSON:', error));
-        }
-        setData(sessionData);                    
-      }, []);
+    const [currentLang, setCurrentLang] = useState('en');
+    const { t,i18n } = useTranslation();
+
+    useEffect(() => {
+          const postId = getPostIdFromURL();
+          const lang = getLanguageFromUrl();
+          if(lang && lang !== 'en'){
+            i18n.changeLanguage(lang);
+            document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+            setCurrentLang(lang);
+          }
+          const postsListItems:PostItemInterface[] = t("blog.postsList", { returnObjects: true }); 
+          setPostId(postId ? Number(postId) : 0);
+          const sessionData = getDataFromSession();
+          if (!sessionData){
+            getJsonData('/data/data.json')
+            .then((jsonData:BlogInterface) => {              
+              storeDataInSession(jsonData);
+          })          
+            .catch(error => console.error('Error fetching JSON:', error));
+          }
+          setData(postsListItems);
+      }, [currentLang]);
 
   
-    const post = data?.postsList.find((post:PostItemInterface) => post.postId === postId);
+    const post = data?.find((post:PostItemInterface) => post.postId === postId);
     const postPageTopSectionProps = post?.postItemTopSection;
     const postPageContentSectionProps = post?.postItemContentSection;
     const postPageBottomSectionProps = post?.postItemBottomSection;

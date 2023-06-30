@@ -1,4 +1,13 @@
-{  
+{
+    "navbar": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "homepage":{
+      "bankNameText": "Demo Bank Name",
+      "buttonText":"Enter Blog"
+    },
+    "blog": {  
         "blogId": 1,
         "blogDate": "28/06/2023",
         "blogImageUrl": "assets/banking-blog-image.jpg",
@@ -6,6 +15,7 @@
         "blogSubTitle":"Neque porro quisquam",
         "postsList": [
         {
+          "postReadMore":"Read More",
           "postId":1,          
           "postItemTopSection":{
               "postDate": "24/06/2023",
@@ -25,6 +35,7 @@
           }
         },
         {
+          "postReadMore":"Read More",
           "postId":2,          
           "postItemTopSection":{
               "postDate": "22/06/2023",
@@ -44,6 +55,7 @@
           }
         },
         {
+          "postReadMore":"Read More",
           "postId":3,          
           "postItemTopSection":{
               "postDate": "22/06/2023",
@@ -56,29 +68,32 @@
           },
           "postItemBottomSection":{
               "postCreator":"Post Creator Name 3",
-              "postCreatorImage":"/assets/female-250.jpeg",
+              "postCreatorImage":"/assets/man-250x250.png",
               "postCreatorTitle":"Post Creator Title",
               "postCreatorLinkedInUrl":"https://www.linkedin.com/in/raz-liveyatan/",
               "postCreatorMailTo":"raz@gmail.com"
           }
-        },{
-            "postId":4,          
-            "postItemTopSection":{
-                "postDate": "25/06/2023",
-                "postImageUrl": "/assets/sample-post-image.jpeg",
-                "postTitle": "Post Title 4 ",
-                "postSubTitle": "Post SubTitle 4"              
-            },            
-            "postItemContentSection":{
-                "postContent":"<div className=\"container wrapper\"><p><Organic woke palo santo tonx. Keytar you probably havent heard of them stumptown consectetur blackbird spyplane, big mood lumbersexual mumblecore intelligentsia before they sold out disrupt ad grailed. Roof party etsy ramps forage deep v vegan VHS celiac. Ethical humblebrag mollit solarpunk synth./p>              <p>Beard truffaut marxism, chambray ad lomo tacos copper mug duis. Elit flexitarian bushwick, copper mug blue bottle wayfarers bitters cupping hot chicken anim tattooed helvetica roof party. Freegan gentrify actually listicle affogato labore 3 wolf moon, magna normcore beard small batch shabby chic. Palo santo master cleanse gentrify pop-up non, big mood affogato eiusmod irony quis man braid cillum kinfolk bodega boys. Man braid whatever meggings 8-bit. Woke twee sustainable chartreuse cupidatat mumblecore DSA vape fingerstache et irure. Vegan jawn eiusmod, wayfarers marxism cupidatat intelligentsia.</p><p>Food truck twee man braid bitters elit, humblebrag cillum tofu. In franzen ugh, pour-over fugiat meditation ea. Heirloom quinoa enim eiusmod irony, cray vaporware do tbh Brooklyn fashion axe non flannel. Salvia fanny pack bruh magna everyday carry occupy flannel lo-fi in 8-bit microdosing roof party raw denim. Commodo 90's tote bag aesthetic yuccie ea neutral milk hotel lomo veniam.</p><p>Artisan disrupt officia, pop-up quinoa chambray dolore salvia pork belly polaroid hella whatever marfa. Deep v put a bird on it celiac sartorial tonx adipisicing cillum raw denim everyday carry venmo ipsum dolore la croix selfies green juice. +1 succulents grailed cronut XOXO gastropub. Tilde cray listicle lo-fi keytar nulla taxidermy la croix. Activated charcoal edison bulb pug crucifix iceland pop-up art party neutral milk hotel ethical aesthetic. Dreamcatcher taiyaki velit coloring book kale chips same etsy roof party gentrify. Waistcoat mixtape migas cronut PBR&B, fashion axe minim hammock chillwave direct trade cillum authentic craft beer.</p><p>Biodiesel hot chicken pickled, enim cred coloring book taiyaki bushwick twee pitchfork eiusmod waistcoat slow-carb whatever blackbird spyplane. Fingerstache 8-bit marfa adaptogen swag subway tile sartorial mixtape pok pok. VHS occaecat drinking vinegar man braid, you probably haven't heard of them semiotics freegan. 90's retro deserunt lomo dreamcatcher, ramps paleo. Plaid pok pok grailed pickled taxidermy aliquip jianbing. Retro hashtag in occaecat. Proident polaroid hammock pok pok marfa nulla, adaptogen activated charcoal do yr poutine air plant.</p></div>"
-            },
-            "postItemBottomSection":{
-                "postCreator":"Post Creator Name 4",
-                "postCreatorImage":"/assets/female-250.jpeg",
-                "postCreatorTitle":"Post Creator Title 4",
-                "postCreatorLinkedInUrl":"https://www.linkedin.com/in/raz-liveyatan/",
-                "postCreatorMailTo":"raz@gmail.com"
-            }
+        },
+        {
+          "postReadMore":"Read More",
+          "postId":4,          
+          "postItemTopSection":{
+              "postDate": "22/06/2023",
+              "postImageUrl": "/assets/sample-post-image.jpeg",
+              "postTitle": "Post Title 4 ",
+              "postSubTitle": "Post SubTitle 4"              
+          },            
+          "postItemContentSection":{
+              "postContent":"<div className=\"container wrapper\"><p><Organic woke palo santo tonx. Keytar you probably havent heard of them stumptown consectetur blackbird spyplane, big mood lumbersexual mumblecore intelligentsia before they sold out disrupt ad grailed. Roof party etsy ramps forage deep v vegan VHS celiac. Ethical humblebrag mollit solarpunk synth./p>              <p>Beard truffaut marxism, chambray ad lomo tacos copper mug duis. Elit flexitarian bushwick, copper mug blue bottle wayfarers bitters cupping hot chicken anim tattooed helvetica roof party. Freegan gentrify actually listicle affogato labore 3 wolf moon, magna normcore beard small batch shabby chic. Palo santo master cleanse gentrify pop-up non, big mood affogato eiusmod irony quis man braid cillum kinfolk bodega boys. Man braid whatever meggings 8-bit. Woke twee sustainable chartreuse cupidatat mumblecore DSA vape fingerstache et irure. Vegan jawn eiusmod, wayfarers marxism cupidatat intelligentsia.</p><p>Food truck twee man braid bitters elit, humblebrag cillum tofu. In franzen ugh, pour-over fugiat meditation ea. Heirloom quinoa enim eiusmod irony, cray vaporware do tbh Brooklyn fashion axe non flannel. Salvia fanny pack bruh magna everyday carry occupy flannel lo-fi in 8-bit microdosing roof party raw denim. Commodo 90's tote bag aesthetic yuccie ea neutral milk hotel lomo veniam.</p><p>Artisan disrupt officia, pop-up quinoa chambray dolore salvia pork belly polaroid hella whatever marfa. Deep v put a bird on it celiac sartorial tonx adipisicing cillum raw denim everyday carry venmo ipsum dolore la croix selfies green juice. +1 succulents grailed cronut XOXO gastropub. Tilde cray listicle lo-fi keytar nulla taxidermy la croix. Activated charcoal edison bulb pug crucifix iceland pop-up art party neutral milk hotel ethical aesthetic. Dreamcatcher taiyaki velit coloring book kale chips same etsy roof party gentrify. Waistcoat mixtape migas cronut PBR&B, fashion axe minim hammock chillwave direct trade cillum authentic craft beer.</p><p>Biodiesel hot chicken pickled, enim cred coloring book taiyaki bushwick twee pitchfork eiusmod waistcoat slow-carb whatever blackbird spyplane. Fingerstache 8-bit marfa adaptogen swag subway tile sartorial mixtape pok pok. VHS occaecat drinking vinegar man braid, you probably haven't heard of them semiotics freegan. 90's retro deserunt lomo dreamcatcher, ramps paleo. Plaid pok pok grailed pickled taxidermy aliquip jianbing. Retro hashtag in occaecat. Proident polaroid hammock pok pok marfa nulla, adaptogen activated charcoal do yr poutine air plant.</p></div>"
+          },
+          "postItemBottomSection":{
+              "postCreator":"Post Creator Name 4",
+              "postCreatorImage":"/assets/man-250x250.png",
+              "postCreatorTitle":"Post Creator Title 4",
+              "postCreatorLinkedInUrl":"https://www.linkedin.com/in/raz-liveyatan/",
+              "postCreatorMailTo":"raz@gmail.com"
           }
+        }
     ]   
   }
+}

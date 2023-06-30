@@ -37,6 +37,25 @@ export const getDataFromSession = () => {
 
 export const getPostIdFromURL = () => {
     const path = window.location.pathname;
-    const postId = path.split('/').pop();
+    const postId = path.split('/')[3];
     return postId || null;
   }
+
+  export const getLanguageFromUrl = () => {
+    const path = window.location.pathname;
+    const lang = path.split('/')[4];
+    return lang || null;
+  }
+
+  export const changeLanguageInUrl = (lang:string) => {
+    if (window.location.href.indexOf('post') > -1){
+        const searchedLang = lang === 'en' ? 'he' : 'en';
+        const currentURL = window.location.href;
+        const updatedURL = currentURL.replace(`${searchedLang}`, `${lang}`);
+        window.history.pushState({ path: updatedURL }, "", updatedURL);
+    }    
+}
+
+  
+
+  

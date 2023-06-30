@@ -1,9 +1,11 @@
 import React from 'react';
 import { PostItemInterface } from '../../../interfaces/interfaces';
+import { useTranslation } from 'react-i18next';
 import PostItem from './postItem/postItem';
 
-const PostsList = (props: { postsListItems: PostItemInterface[] }) => {       
-    const postsListItems:PostItemInterface[] = props.postsListItems;
+const PostsList = () => {       
+    const { t } = useTranslation();    
+    const postsListItems:PostItemInterface[] = t("blog.postsList", { returnObjects: true });    
     return (
     <>
         <div className='postsListGrid'>
