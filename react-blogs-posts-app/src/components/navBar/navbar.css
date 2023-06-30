@@ -13,15 +13,18 @@ nav {
 
 .navbar-nav a {
     text-decoration: none;
-    color:#000;
+    color: #005986;
     font-weight: 400;
+}
+.navbar-nav a:hover{
+    opacity: 0.4;
 }
 
 .navbar-nav a.active {
     font-weight:600;
 }
 .navbar-nav a:not(.active) {
-    color:#ACADB9;
+    color:#005986;
 }
 
 

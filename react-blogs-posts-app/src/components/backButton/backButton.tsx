@@ -7,7 +7,7 @@ const BackButton = () => {
     let navigate = useNavigate();
     
     const handleBack = () => {
-        navigate(-1);
+        navigate('/blog',{replace:true});
     }
     return (
     <div className='backButton' onClick={handleBack}>
@@ -15,7 +15,7 @@ const BackButton = () => {
             <path d="M10 13L5 8L10 3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             </path>
         </svg>
-        <span>Back</span>
+        <h6>Back</h6>
     </div>   
     )
 }

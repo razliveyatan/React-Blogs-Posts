@@ -18,7 +18,6 @@ const BlogPage = () => {
     
     return (
         <div className='blogPageContainer'>
-            <BackButton/>
             <div className={data?.blogImageUrl ? 'blogTopSectionContainer has-image' :'blogTopSectionContainer'}>
                 {
                     data?.blogImageUrl &&
@@ -33,9 +32,9 @@ const BlogPage = () => {
                         <h4>{data?.blogSubTitle}</h4>
                     }
                     <p className='blogDate'>
-                        <span>
+                        <h6>
                             <time>{data?.blogDate}</time>
-                        </span>
+                        </h6>
                     </p>
                 </div>            
             </div>

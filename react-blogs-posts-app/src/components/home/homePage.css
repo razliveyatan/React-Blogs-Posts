@@ -1,0 +1,70 @@
+.homePageButtonContainer{
+    position:relative;
+    margin-top:2rem;
+    opacity: 0;
+  transition: opacity 5s ease;
+}
+
+.homePageButtonContainer.fade-in {
+  opacity: 1;
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+
+.logo-container {
+    background: linear-gradient(0deg,#9dc7c7,#9dc7c7 25%,#64b3c9 65%,#005986 90%,#005986); 
+    background-position: 50%;
+    animation: Animation 20s ease infinite;  
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-text {
+    font-family: Arial, sans-serif;
+    font-size: 56px;
+    color: white;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  }
+
+  .enter-blog-button {
+    background-color: white;
+    border:1px solid #005986;
+    color: #005986;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
+  }
+  
+  .enter-blog-button:hover {
+    cursor: pointer;
+    transform: translateY(1px);
+    color:white;
+    animation: Animation 20s ease infinite;  
+    background-color: #64b3c9;
+  }
+  
+  .enter-blog-button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+
+  

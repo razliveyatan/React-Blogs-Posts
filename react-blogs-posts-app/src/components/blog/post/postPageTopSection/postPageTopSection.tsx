@@ -15,9 +15,9 @@ const PostPageTopSection = (props:PostItemTopSectionInterface) => {
             <div className='postTopInnerContainer'>
                 <h1>{props.postTitle}</h1>                  
                 <p className='postDate'>
-                    <span>
+                    <h6>
                         <time>{props.postDate}</time>
-                    </span>
+                    </h6>
                 </p>
             </div>            
         </div>

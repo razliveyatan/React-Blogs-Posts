@@ -1,4 +1,4 @@
-import Reactת , {useState} from 'react';
+import React, {useState} from 'react';
 import { PostItemInterface } from '../../../../interfaces/interfaces';
 import './postItem.css';
 
@@ -27,8 +27,8 @@ const PostItem = (props:PostItemInterface) => {
                                 </div>
                             </div>
                             <div className='author-details'>
-                                <span>{props.postItemBottomSection.postCreator}</span>
-                                <span className='date'>{props.postItemTopSection.postDate}</span>
+                                <h6>{props.postItemBottomSection.postCreator}</h6>
+                                <h6 className='date'>{props.postItemTopSection.postDate}</h6>
                             </div>
                         </a>
                     </h6>
