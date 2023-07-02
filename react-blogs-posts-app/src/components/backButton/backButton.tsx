@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { getLanguageFromUrl } from '../../services/data-service';
 import './backButton.css';
 
-const BackButton = () => {
+const BackButton = (props:any) => {
     const [buttonText, setButtonText] = useState('Back');
     const [currentLang, setCurrentLang] = useState('en');
 
     useEffect(() => {
         const lang = getLanguageFromUrl();
-          if(lang && lang !== 'en'){
+          if(lang && lang !== 'en' && lang !== currentLang){
             setButtonText('חזור');
-            setCurrentLang(lang);
+            setCurrentLang(lang);            
           }
     },[currentLang])
     let navigate = useNavigate();

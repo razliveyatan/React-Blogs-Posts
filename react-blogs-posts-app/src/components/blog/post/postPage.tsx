@@ -11,14 +11,12 @@ import BackButton from '../../backButton/backButton';
 const PostPage = () => {
     const [data, setData] = useState<PostItemInterface[]>([]); 
     const [postId, setPostId] = useState(0);
-    const [currentLang, setCurrentLang] = useState('en');
-    const { t,i18n } = useTranslation();
-
+    const [currentLang, setCurrentLang] = useState('en');    
+    const { t,i18n } = useTranslation();   
     useEffect(() => {
           const postId = getPostIdFromURL();
           const lang = getLanguageFromUrl();
-          if(lang && lang !== 'en'){
-            i18n.changeLanguage(lang);
+          if(lang && lang !== 'en'){           
             document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
             setCurrentLang(lang);
           }
@@ -33,8 +31,7 @@ const PostPage = () => {
             .catch(error => console.error('Error fetching JSON:', error));
           }
           setData(postsListItems);
-      }, [currentLang]);
-
+      }, [currentLang,i18n,t]);
   
     const post = data?.find((post:PostItemInterface) => post.postId === postId);
     const postPageTopSectionProps = post?.postItemTopSection;
