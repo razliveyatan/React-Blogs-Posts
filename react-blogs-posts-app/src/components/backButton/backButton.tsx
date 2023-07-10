@@ -1,20 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
+import { LanguageContext } from '../../context/languageContext';
+
 import { useNavigate } from "react-router-dom";
-import { getLanguageFromUrl } from '../../services/data-service';
 import './backButton.css';
 
-const BackButton = (props:any) => {
-    const [buttonText, setButtonText] = useState('Back');
-    const [currentLang, setCurrentLang] = useState('en');
-
-    useEffect(() => {
-        const lang = getLanguageFromUrl();
-          if(lang && lang !== 'en' && lang !== currentLang){
-            setButtonText('חזור');
-            setCurrentLang(lang);            
-          }
-    },[currentLang])
+const BackButton = () => {
+    const { language } = useContext(LanguageContext);
+    const buttonText = language === 'he' ? 'חזור' : 'Back';
     let navigate = useNavigate();
+    useEffect(() => {},[language]);
     
     const handleBack = () => {
         navigate('/blog',{replace:true});

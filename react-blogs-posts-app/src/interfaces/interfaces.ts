@@ -1,6 +1,11 @@
 import { NullLiteral } from "typescript"
 
+export interface  JsonResponseInterface {
+    blog:BlogInterface
+}
+
 export interface PostItemInterface {
+    postName:string,
     postReadMore:string,
     postId:number,
     postItemTopSection:PostItemTopSectionInterface,

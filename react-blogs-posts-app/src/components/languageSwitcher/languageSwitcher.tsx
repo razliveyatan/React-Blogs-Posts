@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { LanguageContext } from '../../context/languageContext';
 import './languageSwitcher.css';
-import { changeLanguageInUrl } from '../../services/data-service';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {language, setLanguage} = useContext(LanguageContext);
 
   const changeLanguage = (lng:any) => {
     i18n.changeLanguage(lng);    
     document.documentElement.setAttribute('dir', lng === 'he' ? 'rtl' : 'ltr');
-    changeLanguageInUrl(lng);
+    setLanguage(lng);
     sessionStorage.setItem('lang',lng);
     setIsMenuOpen(false);
   };

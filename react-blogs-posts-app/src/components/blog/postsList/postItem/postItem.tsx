@@ -1,16 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { PostItemInterface } from '../../../../interfaces/interfaces';
+import { Link } from 'react-router-dom';
+import { LanguageContext } from '../../../../context/languageContext';
 import './postItem.css';
 
 const PostItem = (props:PostItemInterface) => { 
   const [isHovered, setIsHovered] = useState(false);
-  const [lang, setLang] = useState('en');
-  useEffect(() => {
-    const lang = sessionStorage.getItem('lang');
-    if (lang){
-        setLang(lang);
-    }
-  },[])
+  const { language } = useContext(LanguageContext);
+  useEffect(() => {    
+  },[language])
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -44,9 +43,9 @@ const PostItem = (props:PostItemInterface) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}>
                 <div className='postGridInner-content'>
-                    <a className='readMore-button' href={`/blog/post/${props.postId}/${lang}`}>
+                    <Link className='readMore-button' to={`/blog/${props.postName}`} state={props}>
                         {props.postReadMore}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </article>

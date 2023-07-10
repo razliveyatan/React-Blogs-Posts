@@ -15,7 +15,6 @@
         "blogSubTitle":"תת כותרת הבלוג",
         "postsList": [
         {
-          "postName":"first-demo-post",
           "postReadMore":"קרא עוד",
           "postId":1,          
           "postItemTopSection":{
@@ -36,7 +35,6 @@
           }
         },
         {
-          "postName":"second-demo-post",
           "postReadMore":"קרא עוד",
           "postId":2,          
           "postItemTopSection":{
@@ -57,7 +55,6 @@
           }
         },
         {
-          "postName":"third-demo-post",
           "postReadMore":"קרא עוד",
           "postId":3,          
           "postItemTopSection":{
@@ -78,7 +75,6 @@
           }
         },
         {
-          "postName":"forth-demo-post",
           "postReadMore":"קרא עוד",
           "postId":4,          
           "postItemTopSection":{

@@ -2,7 +2,7 @@ import { BlogInterface } from "../interfaces/interfaces";
 const sessionStorageDataKey = 'blogData';
 
 export const getJsonData = async(path:string):Promise<any> => {
-    return fetch(path)
+    return fetch(process.env.PUBLIC_URL + path)
     .then(response => {
         if(!response.ok){
             throw new Error('Network response was not ok');
@@ -34,12 +34,12 @@ export const getDataFromSession = () => {
         throw error;
     };       
 }
-
-export const getPostIdFromURL = () => {
-    const path = window.location.pathname;
-    const postId = path.split('/')[3];
-    return postId || null;
-  }
+// Deprecated
+// export const getPostIdFromURL = () => {
+//     const path = window.location.pathname;
+//     const postId = path.split('/')[3];
+//     return postId || null;
+//   }
 
   export const getLanguageFromUrl = () => {
     const path = window.location.pathname;
@@ -47,14 +47,33 @@ export const getPostIdFromURL = () => {
     return lang || null;
   }
 
-  export const changeLanguageInUrl = (lang:string) => {
-    if (window.location.href.indexOf('post') > -1){
-        const searchedLang = lang === 'en' ? 'he' : 'en';
-        const currentURL = window.location.href;
-        const updatedURL = currentURL.replace(`${searchedLang}`, `${lang}`);
-        window.history.pushState({ path: updatedURL }, "", updatedURL);
-    }    
-}
+  export const getPostNameFromUrl = () => {
+    const path = window.location.pathname;
+    const postName = path.split('/')[2];
+    return postName || null;
+  }
+
+  export const changeLanguageInUrl = (lang: string) => {
+    const currentURL = window.location.href;
+    let updatedURL = '';
+  
+    if (lang === 'he') {
+      // Add '/he/' to the URL
+      updatedURL = currentURL.replace(/(https?:\/\/[^/]+\/)(.*)/, `$1he/$2`);
+    } else if (lang === 'en') {
+      // Remove '/he/' from the URL
+      updatedURL = currentURL.replace(/(https?:\/\/[^/]+\/)he\/(.*)/, `$1$2`);
+    }
+  
+    window.history.pushState({ path: updatedURL }, '', updatedURL);
+  };
+  
+  
+  
+  
+  
+  
+  
 
   
 

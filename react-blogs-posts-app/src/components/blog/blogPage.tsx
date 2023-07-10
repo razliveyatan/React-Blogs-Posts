@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import PostsList from './postsList/postsList';
-import { BlogInterface } from '../../interfaces/interfaces';
+import { BlogInterface , JsonResponseInterface} from '../../interfaces/interfaces';
 import {getJsonData, storeDataInSession} from '../../services/data-service';
 import { useTranslation } from 'react-i18next';
 import '../blog/blogPage.css';
@@ -8,10 +8,10 @@ import '../blog/blogPage.css';
 const BlogPage = () => {
     const [data, setData] = useState<BlogInterface | null>(null);   
     useEffect(() => {
-        getJsonData('data/data.json')
-          .then((jsonData:BlogInterface) => {
-            setData(jsonData);
-            storeDataInSession(jsonData);
+        getJsonData('/locales/en.json')
+          .then((jsonData:JsonResponseInterface) => {
+            setData(jsonData.blog);
+            storeDataInSession(jsonData.blog);
         })          
           .catch(error => console.error('Error fetching JSON:', error));
       }, []);

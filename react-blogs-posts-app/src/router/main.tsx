@@ -15,8 +15,8 @@ const MainRouter: React.FC = () => {
       <React.Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<HomePage />} />        
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/post/:postId/:lang" element={<PostPage />} />
+        <Route path="/blog" element={<BlogPage />} />        
+        <Route path="/blog/:postName" element={<PostPage />} />        
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       </React.Suspense>

@@ -15,7 +15,6 @@
         "blogSubTitle":"Neque porro quisquam",
         "postsList": [
         {
-          "postName":"first-demo-post",
           "postReadMore":"Read More",
           "postId":1,          
           "postItemTopSection":{
@@ -36,7 +35,6 @@
           }
         },
         {
-          "postName":"second-demo-post",
           "postReadMore":"Read More",
           "postId":2,          
           "postItemTopSection":{
@@ -57,7 +55,6 @@
           }
         },
         {
-          "postName":"third-demo-post",
           "postReadMore":"Read More",
           "postId":3,          
           "postItemTopSection":{
@@ -78,7 +75,6 @@
           }
         },
         {
-          "postName":"forth-demo-post",
           "postReadMore":"Read More",
           "postId":4,          
           "postItemTopSection":{

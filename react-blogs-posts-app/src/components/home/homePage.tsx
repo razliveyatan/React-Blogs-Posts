@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './homePage.css';
 
 const HomePage = () => {    
-    const [shouldFadeIn, setShouldFadeIn] = useState(false);
-
+    const [shouldFadeIn, setShouldFadeIn] = useState(false);   
     useEffect(() => {
       setShouldFadeIn(true);
     }, []);
@@ -19,7 +18,7 @@ const HomePage = () => {
             <h1 className="logo-text">{t('homepage.bankNameText')}</h1>
         </div>
         <div className={containerClassName}>
-            <Link to="/blog">
+            <Link to={'/blog'}>
                 <button type="button" className='enter-blog-button'>{t('homepage.buttonText')}</button>
             </Link>
         </div>        
